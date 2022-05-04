@@ -3,3 +3,70 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Varela Round', sans-serif;
+    background-color: lightgrey
+    ;
+}
+
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.input-section h1{
+    margin: 25px;
+}
+
+.input-section,
+.container p{
+    text-align: center;
+}
+
+.input-section input{
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.input-section button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.list-section{
+    margin-top: 25px;
+    background-color: bisque;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.list-section ul{
+    list-style: none;
+}
+
+.list-section ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+/* .list-section ul li i{
+
+} */
+
+.list-section ul li:hover{
+    background-color: rgb(243, 241, 239);
+}
+
+.done-todo{
+    text-decoration: line-through;
+}
