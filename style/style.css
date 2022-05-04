@@ -67,10 +67,11 @@ body{
     background-color: rgb(243, 241, 239);
 }
 
-.done-todo{
+.taskDone{
     text-decoration: line-through;
 }
 
-.list-section ul li i{
+.list-section ul li i,
+.list-section ul li span{
     cursor: pointer;
 }

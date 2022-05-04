@@ -46,7 +46,7 @@ const app = new Vue({
         todos : [
             {
                 title: 'Studia i mercati',
-                done: true
+                done: false
             },
             {
                 title: 'Fai meditazione',
@@ -64,19 +64,33 @@ const app = new Vue({
                 title: 'Pisciare il cane',
                 done: true
             }
-        ]
+        ],
+
+        newDuty : ''
     },
 
     methods : {
-        lineThroughText(done){
-            done = true;
-            console.log(done)
-            
+
+        lineThroughText(index){
+            this.todos[index].done = (this.todos[index].done) ? false : true;
+            console.log(this.todos[index].done)
         },
 
         removeTodo(index){
-            if(confirm(`Sei sicuro di voler eliminare il ToDo ${this.todos[index]} ?`)){
+
+            if(confirm(`Sei sicuro di voler eliminare il ToDo ${this.todos[index].title} ?`)){
                 this.todos.splice(index, 1)
+            }
+        },
+
+        pushTodo(){
+            let task = {
+                title: this.newDuty,
+                done: false
+            };
+            if(this.newDuty.length > 1){
+                this.todos.push(task);
+                this.newDuty = ''
             }
         }
     }
