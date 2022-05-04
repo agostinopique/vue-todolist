@@ -27,13 +27,13 @@ body{
 
 .input-section input{
     width: 300px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     border: 1px solid black;
 }
 
 .input-section button{
-    padding: 10px 20px;
+    padding: 15px 25px;
     border-radius: 10px;
     border: 1px solid black;
     cursor: pointer;
@@ -69,4 +69,8 @@ body{
 
 .done-todo{
     text-decoration: line-through;
+}
+
+.list-section ul li i{
+    cursor: pointer;
 }

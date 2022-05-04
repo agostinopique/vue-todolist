@@ -46,7 +46,7 @@ const app = new Vue({
         todos : [
             {
                 title: 'Studia i mercati',
-                done: false
+                done: true
             },
             {
                 title: 'Fai meditazione',
@@ -58,7 +58,7 @@ const app = new Vue({
             },
             {
                 title: 'Lavare auto',
-                done: true
+                done: false
             },
             {
                 title: 'Pisciare il cane',
@@ -72,6 +72,12 @@ const app = new Vue({
             done = true;
             console.log(done)
             
+        },
+
+        removeTodo(index){
+            if(confirm(`Sei sicuro di voler eliminare il ToDo ${this.todos[index]} ?`)){
+                this.todos.splice(index, 1)
+            }
         }
     }
 

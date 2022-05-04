@@ -33,12 +33,16 @@
                 <ul>
 
                     <li 
-                        v-for="(todo, done) in todos"
-                        :class="todo.done === true ? 'done-todo': ''"
+                        v-for="(todo, done, index) in todos"
+                        
                     >
 
-                        {{todo.title}}
-                        <i class="fa-solid fa-xmark fa-2x"></i>
+                        <p :class="todo.done === true ? 'done-todo': ''">
+                            {{todo.title}}
+                        </p>
+                        <i
+                        @click="removeTodo(index)" 
+                        class="fa-solid fa-xmark fa-2x"></i>
                     </li>
 
                 </ul>
