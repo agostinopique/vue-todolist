@@ -42,7 +42,7 @@
 
                 <ul>
 
-                    <li         
+                    <li
                         v-for="(todo, index) in todos"
                         @click="lineThroughText(index)">
 
@@ -56,7 +56,7 @@
                     </li>
 
                 </ul>
-
+                <h2 v-if="todos.length < 1">Non ci sono piu ToDo!</h2>
             </div>
             <p>Made with &hearts; by Agostino Pique</p>
 
