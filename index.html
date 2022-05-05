@@ -19,8 +19,7 @@
 <body>
 
     <div id="app">
-        <div class="container"
-        @keyup.enter="pushTodo()">
+        <div class="container">
 
             
             <div class="input-section">
@@ -28,7 +27,8 @@
                 <input 
                 v-model.trim="newDuty"
                 type="text" 
-                placeholder="New ToDo">
+                placeholder="New ToDo"
+                @keyup.enter="pushTodo()">
 
                 <button 
                 
