@@ -72,7 +72,8 @@ const app = new Vue({
     methods : {
 
         lineThroughText(index){
-            this.todos[index].done = (this.todos[index].done) ? false : true;
+            this.todos[index].done = !this.todos[index].done
+            // this.todos[index].done = (this.todos[index].done) ? false : true; <--- VERSIONE PRECEDENTE
             console.log(this.todos[index].done)
         },
 

@@ -43,15 +43,15 @@
                 <ul>
 
                     <li         
-                        v-for="(todo, index) in todos">
+                        v-for="(todo, index) in todos"
+                        @click="lineThroughText(index)">
 
-                        <span 
-                        @click="lineThroughText(index)"
+                        <span
                         :class="(todo.done) ? 'taskDone': ''">
                             {{todo.title}}
                         </span>
                         <i
-                        @click="removeTodo(index)" 
+                        @click.stop="removeTodo(index)" 
                         class="fa-solid fa-xmark fa-2x"></i>
                     </li>
 
